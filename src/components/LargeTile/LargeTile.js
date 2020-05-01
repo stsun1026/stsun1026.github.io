@@ -6,7 +6,7 @@ const LargeTile = ({
 }) => {
   return (
     <div className={ styles.rectangle }>
-      <div className = {styles.textPadding }>{ text }</div>
+      <div className = { styles.textPadding }>{ text }</div>
     </div>
   );
 }

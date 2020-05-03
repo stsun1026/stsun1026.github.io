@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-
 import SamplePage from './pages/samplePage';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { withRouter } from 'react-router-dom'
-
-
+import HomePage from './pages/HomePage/HomePage';
+import ClearTheTreePage from './pages/ClearTheTreePage/ClearTheTreePage';
 function App() {
   const Button = withRouter(({ history }) => (
     <button
@@ -15,32 +14,26 @@ function App() {
       Click Me!
     </button>
   ));
-
-    const sp = SamplePage({content: "hello"});
+  const sp = SamplePage({content: "hello"});
   return (
     <div className="App">
-            <Router>
-
-      <header className="App-header">
-        <div>
-              <Link to="/">Home</Link>
-              <Link to="/l1">Link2</Link>
-              <Button/>
-        </div>
-        <Switch>
-          <Route path="/l1">
-            <SamplePage content={"This is some text and here is some more text"}/>
-          </Route>
-          <Route path="/l2" component={() => sp}/>
-            {/* <SamplePage content={"This is the content of link 2"}/> */}
-
-          <Route path = "/">
-            <SamplePage/>
-          </Route>
-        </Switch>
-    </header>
-    </Router>
-    
+      <Router>
+        <header className="App-header">on
+          <Switch>
+            <Route path="/clear-the-pipe">
+              <ClearTheTreePage/>
+            </Route>
+            <Route path="/l1">
+              <SamplePage content={"This is some text and here is some more text"}/>
+            </Route>
+            <Route path="/l2" component={() => sp}/>
+              {/* <SamplePage content={"This is the content of link 2"}/> */}
+            <Route path = "/">
+              <HomePage/>
+            </Route>
+          </Switch>
+        </header>
+      </Router>
     </div>
   );
 }

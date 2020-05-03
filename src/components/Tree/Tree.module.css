@@ -1,0 +1,39 @@
+.container {
+  position: relative;
+  height: 500px;
+  margin-right: 400px;
+}
+
+.tree {
+  position: absolute;
+  bottom: 0px;
+}
+
+.leaves {
+  height: 200px;
+  width: 400px;
+  background-color: green;
+}
+
+.trunk {
+  height: 30px;
+  width: 200px;
+  margin-left: 100px;
+  background-color: #86592d;
+}
+
+.green {
+  height: 30px;
+  width: 200px;
+  margin-left: 100px;
+  background-color: #86592d;
+  color: #40ff00;
+}
+
+.red {
+  height: 30px;
+  width: 200px;
+  margin-left: 100px;
+  background-color: #86592d;
+  color: #ff0000;
+}

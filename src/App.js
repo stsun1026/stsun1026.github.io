@@ -20,7 +20,7 @@ function App() {
       <Router>
         <header className="App-header">on
           <Switch>
-            <Route path="/clear-the-pipe">
+            <Route path="/clear-the-tree">
               <ClearTheTreePage/>
             </Route>
             <Route path="/l1">

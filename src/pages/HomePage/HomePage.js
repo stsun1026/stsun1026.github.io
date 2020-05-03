@@ -8,7 +8,7 @@ const HomePage = () => {
       <div className= { styles.welcome }>welcome</div>
       <div className={ styles.menuContainer }>
         { linkify({ component:<LargeTile text="about + contact"/>, route:"/l1" }) }
-        { linkify({ component:<LargeTile text="clear the pipe"/>, route:"/clear-the-pipe" }) }
+        { linkify({ component:<LargeTile text="clear the pipe"/>, route:"/clear-the-tree" }) }
         { linkify({ component:<LargeTile text="another thing"/>, route:"/l1" }) }
         { linkify({ component:<LargeTile text="thing 3"/>, route:"/l1" }) }
       </div>

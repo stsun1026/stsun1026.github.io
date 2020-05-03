@@ -1,0 +1,14 @@
+.welcome {
+  text-align: left;
+  font-size: 40px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.menuContainer {
+  display: flex;
+  height: 650px;
+  width: 650px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

@@ -6,17 +6,29 @@ const ClearTheTreeGame = () => {
   const logic = useRef(new TreeGameLogic());  
   const [tree, setTree] = useState();
   const [intervalLength, setIntervalLength] = useState(1000);
+  const [shouldFocusInput, setShouldFocusInput] = useState(false);
+
+  const inputRef = useRef(null);
 
   const startGame = (intervalLength) => {
     logic.current.start();
     setTree(<Tree contentList={ logic.current.getOutput() }/>);
     setIntervalLength(intervalLength);
+    setShouldFocusInput(true);
   }
+
+  useEffect(() => {
+    console.log("use eff", shouldFocusInput);
+    if(shouldFocusInput) {
+      inputRef.current.focus();
+    }
+  }, [shouldFocusInput]);
 
   const interval = useInterval(() => {
     if(logic.current.isActive) {
       if(logic.current.loss()) {
         setTree(<div>THE TREE WINS</div>);
+        setShouldFocusInput(false);
       }
       else {
         logic.current.push();
@@ -56,7 +68,10 @@ const ClearTheTreeGame = () => {
         </div>
       }
       <div>{ tree }</div>
-      { logic.current.isActive ? <div><input onKeyPress={ submit } type="number"></input><div>"Enter" to answer</div></div> : <div></div> }
+      <div style={{ visibility: logic.current.isActive ? "visible" : "hidden" }}>
+        <input onKeyPress={ submit } type="number" ref={ inputRef }></input>
+        <div>"Enter" to answer</div>
+      </div>
     </div>
   )
 }

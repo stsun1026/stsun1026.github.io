@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <header className="App-header">on
+        <header className="App-header">
           <Switch>
             <Route path="/clear-the-tree">
               <ClearTheTreePage/>

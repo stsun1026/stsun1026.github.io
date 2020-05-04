@@ -56,7 +56,7 @@ const ClearTheTreeGame = () => {
         </div>
       }
       <div>{ tree }</div>
-      { logic.current.isActive ? <input onKeyPress={ submit } type="number"></input> : <div></div> } 
+      { logic.current.isActive ? <div><input onKeyPress={ submit } type="number"></input><div>"Enter" to answer</div></div> : <div></div> }
     </div>
   )
 }

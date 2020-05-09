@@ -4,6 +4,7 @@
   color: white;
   height: 50px;
   width: 200px;
+  cursor: pointer;
   border: 2px solid grey;
   border-radius: 5px;
   font-family: Arial, Helvetica, sans-serif;

@@ -2,18 +2,9 @@ import React from 'react';
 import './App.css';
 import SamplePage from './pages/samplePage';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { withRouter } from 'react-router-dom'
 import HomePage from './pages/HomePage/HomePage';
 import ClearTheTreePage from './pages/ClearTheTreePage/ClearTheTreePage';
 function App() {
-  const Button = withRouter(({ history }) => (
-    <button
-      type='button'
-      onClick={() => { history.push('/l2') }}
-    >
-      Click Me!
-    </button>
-  ));
   const sp = SamplePage({content: "hello"});
   return (
     <div className="App">

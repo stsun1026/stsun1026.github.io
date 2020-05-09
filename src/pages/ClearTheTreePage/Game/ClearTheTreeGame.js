@@ -61,7 +61,7 @@ const ClearTheTreeGame = ({
       { logic.current.isActive ? <div></div> :
         <div>
           <div className={ styles.introText } style={{ width: gameWidth }}>
-            You are a lumberjack who cuts down trees by solving math equations. <br/>Can you cut down this tree?
+            You are a lumberjack who cuts down trees by solving math equations.<br/>Can you cut down this tree?
           </div>
           <div style={{ paddingBottom: 20 }}>Choose a difficulty:</div>
           <div className={ gameWidth > 700 ? styles.buttonGroupAdjacent : styles.buttonGroupStacked }>

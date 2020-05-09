@@ -2,7 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from "./ClearTheTreeGame.module.css";
 import { TreeGameLogic } from "./TreeGameLogic";
 import { Tree } from "../../../components/Tree/Tree";
-const ClearTheTreeGame = () => {
+const ClearTheTreeGame = ({
+  gameWidth
+}) => {
   const logic = useRef(new TreeGameLogic());  
   const [tree, setTree] = useState();
   const [intervalLength, setIntervalLength] = useState(1000);
@@ -58,12 +60,14 @@ const ClearTheTreeGame = () => {
     <div>
       { logic.current.isActive ? <div></div> :
         <div>
-          <p>You are a lumberjack who cuts down trees by solving math equations. <br/>Can you cut down this tree?</p>
-          <div style={{paddingBottom: 20}}>Choose a difficulty:</div>
-          <div className={ styles.buttonGroup }>
-            <button  className={ styles.button } onClick={() => { startGame(3000) }}><b>NORMAL</b></button>
-            <button  className={ styles.button } onClick={() => { startGame(2000) }}><b>HARD</b></button>
-            <button  className={ styles.button } onClick={() => { startGame(1500) }}><b>I DO MATH FOR FUN</b></button>
+          <div className={ styles.introText } style={{ width: gameWidth }}>
+            You are a lumberjack who cuts down trees by solving math equations. <br/>Can you cut down this tree?
+          </div>
+          <div style={{ paddingBottom: 20 }}>Choose a difficulty:</div>
+          <div className={ gameWidth > 700 ? styles.buttonGroupAdjacent : styles.buttonGroupStacked }>
+            <button className={ styles.button } onClick={() => { startGame(3000) }}><b>NORMAL</b></button>
+            <button className={ styles.button } onClick={() => { startGame(2000) }}><b>HARD</b></button>
+            <button className={ styles.button } onClick={() => { startGame(1500) }}><b>I DO MATH FOR FUN</b></button>
           </div>
         </div>
       }

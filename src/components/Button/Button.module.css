@@ -1,0 +1,16 @@
+.container {
+  height: 40px;
+  width: 150px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+}
+
+.container:hover {
+  background-color:#c7d6e6;
+  cursor: pointer;  
+}
+
+.text {
+  padding-top: 8px;
+}

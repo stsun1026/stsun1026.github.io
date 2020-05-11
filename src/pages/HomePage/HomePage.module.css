@@ -1,10 +1,47 @@
-.welcome {
-  font-size: 40px;
-  padding-bottom: 20px;
+/*
+Potential colors (WIP):
+  #CED097; 
+  #BEE1C5; 
+  #b9a8a2; 
+  #e3d8d2; 
+  #a6d7e8; 
+  #c2dce9;
+
+Potential fonts (WIP)
+  Fira Code
+  DM Mono
+*/
+
+.contentContainer {
+  color: black;
+  background-color: #d2e0e2;
+  border-top: 2px solid #ccdbe9
 }
 
-.menuContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+
+.content {
+  display: inline-block;
+  vertical-align: top;
+  width: 400px;
+  padding-left: 150px;
+  padding-top: 50px;
+  font-family: 'Pontano Sans', sans-serif;
+}
+
+.photo {
+  display: inline-block;
+  border-radius: 50%;
+  width: 450px;
+  height: 450px;
+  vertical-align: top;
+  border: 5px solid white;
+}
+
+.nameText {
+  font-size: 65px;
+  height: 100px;
+}
+
+.mediaBar {
+  padding-top: 130px;
 }

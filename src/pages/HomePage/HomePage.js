@@ -1,21 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import { LargeTile } from '../../components/LargeTile/LargeTile';
-import styles from "./HomePage.module.css";
-import { linkify } from "../../services/RoutingService"
+import Topbar from "../../components/Topbar/Topbar";
+import MediaBar from "../../components/MediaBar/MediaBar";
 import useWindowDimensions from "../../services/WindowDimensions";
+import headshot from "../../assets/photo-steven-sun.jfif";
+import styles from "./HomePage.module.css";
 
 const MAX_SIZE = 680;
 const HomePage = () => {
   const { height, width } = useWindowDimensions();
   const isShrunk = width < MAX_SIZE;
   return(
-    <div>
-      <div className={ styles.welcome } style={{ textAlign: isShrunk ? "center" : "left", paddingLeft: isShrunk ? 0 : 20 }}>welcome</div>
-      <div className={ styles.menuContainer } style={{ width: isShrunk ? width : MAX_SIZE }}>
-        { linkify({ component:<LargeTile text="about + contact"/>, route:"/l1" }) }
-        { linkify({ component:<LargeTile text="clear the tree"/>, route:"/clear-the-tree" }) }
-        { linkify({ component:<LargeTile text="another thing"/>, route:"/l1" }) }
-        { linkify({ component:<LargeTile text="thing 3"/>, route:"/l1" }) }
+    <div style={{ width: width, height: height}}>
+      <Topbar/>
+      <div className={ styles.contentContainer } style={{ height: Math.max(height - 42,   510)}}>
+        <div style={{ paddingTop: 50 }}>
+          <img src={ headshot } className={ styles.photo }></img>
+          <div className={ styles.content }>
+            <div className={ styles.nameText }>Steven Sun</div>
+            <p style={{ fontSize: 20 }}>
+              Software developer making the transition from intern to full time, 
+              passionate about full stack web development, and using this website 
+              to learn frontend and design.
+            </p>
+            <div className={ styles.mediaBar }>
+              <MediaBar />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

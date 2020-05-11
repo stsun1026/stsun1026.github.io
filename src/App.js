@@ -14,11 +14,6 @@ function App() {
             <Route path="/clear-the-tree">
               <ClearTheTreePage/>
             </Route>
-            <Route path="/l1">
-              <SamplePage content={"This is some text and here is some more text"}/>
-            </Route>
-            <Route path="/l2" component={() => sp}/>
-              {/* <SamplePage content={"This is the content of link 2"}/> */}
             <Route path = "/">
               <HomePage/>
             </Route>

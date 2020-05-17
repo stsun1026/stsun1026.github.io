@@ -12,12 +12,18 @@ Potential fonts (WIP)
   DM Mono
 */
 
-.contentContainer {
-  color: black;
+.container {
   background-color: #d2e0e2;
-  border-top: 2px solid #ccdbe9
+  width: 100%;
+  overflow-x: hidden;
 }
 
+.contentContainer {
+  /* background-color: #d2e0e2;   */
+  color: black;
+  border-top: 2px solid #ccdbe9;
+
+}
 
 .content {
   display: inline-block;
@@ -31,10 +37,8 @@ Potential fonts (WIP)
 .photo {
   display: inline-block;
   border-radius: 50%;
-  width: 450px;
-  height: 450px;
-  vertical-align: top;
   border: 5px solid white;
+  user-select: none;
 }
 
 .nameText {

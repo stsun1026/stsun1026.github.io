@@ -22,19 +22,24 @@ const HomePage = () => {
   }
 
   return(
-    <div className={ styles.container } style={{ height: height, overflowY: isMobileView ? "scroll" : "hidden" }}>
+    <div className={ styles.container } 
+      style={{
+        height: isMobileView ? "auto" : height,
+        overflowY: isMobileView ? "scroll" : "hidden" 
+      }}
+    >
       { isMobileView ? <TopbarDropdown/> : <Topbar/> }
       <div 
         className={ styles.contentContainer }
         style={{ 
           height: Math.max(height - 42, 510),
-          paddingTop: isMobileView ? 0 : 50
+          paddingTop: isMobileView ? 20 : 50
         }}
       >
         <div style={{ display: isMobileView ? "block" : "inline" }}>
         <img src={ headshot }
           className={ styles.photo }
-          style={{ width: getPicWidth(), marginTop: (450 - getPicWidth) / 4 }}
+          style={{ width: getPicWidth(), marginTop: isMobileView ? 0 : (450 - getPicWidth) / 4 }}
         />
         </div>
         <div 

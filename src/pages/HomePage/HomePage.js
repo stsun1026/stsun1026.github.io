@@ -24,7 +24,7 @@ const HomePage = () => {
   return(
     <div className={ styles.container } 
       style={{
-        height: isMobileView ? "auto" : height,
+        // height: isMobileView ? "auto" : height,
         overflowY: isMobileView ? "auto" : "hidden" 
       }}
     >
@@ -32,15 +32,15 @@ const HomePage = () => {
       <div 
         className={ styles.contentContainer }
         style={{ 
-          height: Math.max(height - 42, 510),
+          height: Math.max(height - 95, 450),
           paddingTop: isMobileView ? 20 : 50
         }}
       >
         <div style={{ display: isMobileView ? "block" : "inline" }}>
-        <img src={ headshot }
-          className={ styles.photo }
-          style={{ width: getPicWidth(), marginTop: isMobileView ? 0 : (450 - getPicWidth) / 4 }}
-        />
+          <img src={ headshot }
+            className={ styles.photo }
+            style={{ width: getPicWidth(), marginTop: isMobileView ? 0 : (450 - getPicWidth) / 4 }}
+          />
         </div>
         <div 
           className={ styles.content }

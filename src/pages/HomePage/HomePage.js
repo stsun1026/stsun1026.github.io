@@ -25,7 +25,7 @@ const HomePage = () => {
     <div className={ styles.container } 
       style={{
         height: isMobileView ? "auto" : height,
-        overflowY: isMobileView ? "scroll" : "hidden" 
+        overflowY: isMobileView ? "auto" : "hidden" 
       }}
     >
       { isMobileView ? <TopbarDropdown/> : <Topbar/> }

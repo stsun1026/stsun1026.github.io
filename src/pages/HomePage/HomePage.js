@@ -32,7 +32,7 @@ const HomePage = () => {
       <div 
         className={ styles.contentContainer }
         style={{ 
-          height: Math.max(height - 95, 450),
+          height: isMobileView ? "auto" : Math.max(height - 95, 450),
           paddingTop: isMobileView ? 20 : 50
         }}
       >

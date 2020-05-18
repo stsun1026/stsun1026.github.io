@@ -15,10 +15,9 @@
 }
 
 .menu {
-  /* text-align: left; */
   border: 1px solid #CFDCDB;
   border-bottom: none;
-  height: 161px;
+  height: 175px;
   transition: height 0.3s;
 }
 

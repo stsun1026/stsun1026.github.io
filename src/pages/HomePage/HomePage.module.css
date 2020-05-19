@@ -1,36 +1,23 @@
-/*
-Potential colors (WIP):
-  #CED097; 
-  #BEE1C5; 
-  #b9a8a2; 
-  #e3d8d2; 
-  #a6d7e8; 
-  #c2dce9;
-
-Potential fonts (WIP)
-  Fira Code
-  DM Mono
-*/
-
 .container {
   background-color: #d2e0e2;
   width: 100%;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
 .contentContainer {
-  /* background-color: #d2e0e2;   */
   color: black;
   border-top: 2px solid #ccdbe9;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 550px;
 }
 
 .content {
   display: inline-block;
   vertical-align: top;
   width: 400px;
-  padding-left: 150px;
-  padding-top: 50px;
   font-family: 'Pontano Sans', sans-serif;
 }
 
@@ -39,12 +26,15 @@ Potential fonts (WIP)
   border-radius: 50%;
   border: 5px solid white;
   user-select: none;
+  width: 220px;
+  margin-bottom: 20px;
 }
 
-.nameText {
-  height: 100px;
+.intro {
+  font-size: 20px;
+  padding-top: 10px;
 }
 
 .mediaBar {
-  padding-top: 130px;
+  padding-top: 60px;
 }

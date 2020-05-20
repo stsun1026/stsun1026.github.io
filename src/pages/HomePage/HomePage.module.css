@@ -1,7 +1,5 @@
 .container {
-  background-color: #d2e0e2;
   width: 100%;
-  overflow-x: hidden;
 }
 
 .contentContainer {
@@ -10,6 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #d2e0e2;
+  min-height: 550px;
 }
 
 .photo {

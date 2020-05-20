@@ -14,7 +14,9 @@ const HomePage = () => {
   return(
     <div className={ styles.container }>
       { isMobileView ? <TopbarDropdown/> : <Topbar/> }
-      <div className={ styles.contentContainer } style={{ height: Math.max(550, height - 45) }}>
+      <div className={ styles.contentContainer } 
+        style={{ height: isMobileView ? 450: Math.max(550, height - 45) }}
+      >
         <div style={{ maxWidth: 750, paddingLeft: 20, paddingRight: 20}}>
           <img src={ headshot } className={ styles.photo }/>
           <div style={{ fontSize: isMobileView ? 55 : 65 }}>Steven Sun</div>

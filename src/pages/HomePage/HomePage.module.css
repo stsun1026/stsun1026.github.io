@@ -1,5 +1,6 @@
 .container {
   background-color: #d2e0e2;
+  vertical-align: top;
   width: 100%;
   overflow-x: hidden;
 }
@@ -10,13 +11,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.content {
-  display: inline-block;
-  vertical-align: top;
-  width: 400px;
-  font-family: 'Pontano Sans', sans-serif;
 }
 
 .photo {

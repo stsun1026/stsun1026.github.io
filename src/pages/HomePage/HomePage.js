@@ -12,10 +12,15 @@ const HomePage = () => {
   const isMobileView = width < MOBILE_VIEW_MAX_WIDTH;
 
   return(
-    <div className={ styles.container }>
+    <div className={ styles.container }
+      style={{
+        height: isMobileView ? "auto" : height,
+        overflowY: isMobileView ? "scroll" : "hidden" 
+      }}
+    >
       { isMobileView ? <TopbarDropdown/> : <Topbar/> }
       <div className={ styles.contentContainer } 
-        style={{ height: isMobileView ? height : Math.max(550, height - 45) }}
+        style={{ height: Math.max(550, height - 45) }}
       >
         <div style={{ maxWidth: 750, paddingLeft: 20, paddingRight: 20}}>
           <img src={ headshot } className={ styles.photo }/>

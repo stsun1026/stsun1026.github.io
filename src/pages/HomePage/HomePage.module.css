@@ -1,7 +1,6 @@
 .container {
   background-color: #d2e0e2;
   width: 100%;
-  overflow-y: auto;
   overflow-x: hidden;
 }
 
@@ -11,7 +10,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 550px;
 }
 
 .content {

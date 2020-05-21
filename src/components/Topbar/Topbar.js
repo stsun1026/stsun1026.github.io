@@ -11,9 +11,9 @@ const Topbar = ({
       { linkify({ component: <Button label="HOME"/>, route: "/" }) }
       </div>
       <div className={ styles.trailing }>
-        { linkify({ component: <Button label="EXPERIENCE"/>, route: "/" }) }
-        { linkify({ component: <Button label="PROJECTS"/>, route: "/" }) }
-        { linkify({ component: <Button label="PHOTOS"/>, route: "/" }) }
+        { linkify({ component: <Button label="EXPERIENCE"/>, route: "/experience" }) }
+        { linkify({ component: <Button label="PROJECTS"/>, route: "/projects" }) }
+        { linkify({ component: <Button label="PHOTOS"/>, route: "/photos" }) }
       </div>
     </div>
   );

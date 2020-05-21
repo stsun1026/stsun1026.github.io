@@ -16,10 +16,10 @@ const TopbarDropdown = ({
       </div>
       {
         <div className={ open ? styles.menu : styles.hidden }>
-          <Button label="HOME" style={ buttonStyle }/>
-          <Button label="EXPERIENCE" style={ buttonStyle }/>
-          <Button label="PROJECTS" style={ buttonStyle }/>
-          <Button label="PHOTOS" style={ buttonStyle }/>
+          { linkify({ component: <Button label="HOME" style={ buttonStyle }/>, route: "/" }) }
+          { linkify({ component: <Button label="EXPERIENCE" style={ buttonStyle }/>, route: "/experience" }) }
+          { linkify({ component: <Button label="PROJECTS" style={ buttonStyle }/>, route: "/projects" }) }
+          { linkify({ component: <Button label="PHOTOS" style={ buttonStyle }/>, route: "/photos" }) }
         </div>
       }
     </div>

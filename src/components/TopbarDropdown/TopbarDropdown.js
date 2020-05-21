@@ -7,7 +7,6 @@ import Button from "../Button/Button";
 const TopbarDropdown = ({
 }) => {
   const [open, setOpen] = useState(false);
-  console.log(open);
   const buttonStyle = { width: "100%", borderBottom: "1px solid #CFDCDB" };
   return(
     <div>
@@ -15,7 +14,7 @@ const TopbarDropdown = ({
         <FaBars className={ styles.icon } onClick={() => setOpen(!open)}/>
       </div>
       {
-        <div className={ open ? styles.menu : styles.hidden }>
+        <div className={ open ? styles.menu : styles.hidden } onClick={() => setOpen(false)}>
           { linkify({ component: <Button label="HOME" style={ buttonStyle }/>, route: "/" }) }
           { linkify({ component: <Button label="EXPERIENCE" style={ buttonStyle }/>, route: "/experience" }) }
           { linkify({ component: <Button label="PROJECTS" style={ buttonStyle }/>, route: "/projects" }) }

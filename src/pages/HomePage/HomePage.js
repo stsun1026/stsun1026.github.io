@@ -20,7 +20,7 @@ const HomePage = () => {
           <div style={{ fontSize: isMobileView ? 55 : 65 }}>Steven Sun</div>
           <div className={ styles.intro }>
             Software developer making the transition from intern to full time, 
-            passionate about full stack web development, and using this website 
+            passionate about full stack web development. Using this website 
             to learn frontend and design.
           </div>
           <div className={ styles.mediaBar }><MediaBar/></div>

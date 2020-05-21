@@ -12,7 +12,7 @@ const HomePage = () => {
   const isMobileView = width < MOBILE_VIEW_MAX_WIDTH;
 
   return(
-    <div className={ styles.container }>
+    <div className={ styles.container } style={{ overflow: isMobileView ? "hidden" : "auto"}}>
       { isMobileView ? <TopbarDropdown/> : <Topbar/> }
       <div className={ styles.contentContainer } style={{ height: height - 45 }}>
         <div style={{ maxWidth: 750, paddingLeft: 20, paddingRight: 20}}>

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styles from "./Transition.module.css";
 
 const Transition = ({
-  children
+  children,
+  delay = 0,
 }) => {
   const [isRendered, setIsRendered] = useState(false);
 
@@ -11,7 +12,7 @@ const Transition = ({
   }, []);
 
   return (
-    <div className={ isRendered ? styles.transition : styles.hidden }>
+    <div className={ isRendered ? styles.transition : styles.hidden } style={{ transitionDelay: `${delay}s` }}>
       { children } 
     </div>
   );
